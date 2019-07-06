@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<!-- Title -->
+		<title>C3 - Django Blogs - Introduction to Django</title>
+
+		<!-- Favicon -->
+		<link rel="icon" href="../../../img/core-img/favicon.ico">
+
+		<!-- Stylesheet -->
+		<link rel="stylesheet" href="../../../style.css">
+
+		<style>
+			code {
+				background-color: #212121;
+				display: block;
+				width: 100%;
+				padding: 10px 15px;
+				color: #db4437;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!-- Preloader -->
+		<div class="preloader d-flex align-items-center justify-content-center">
+			<div class="lds-ellipsis">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- ##### Header Area Start ##### -->
+		<header class="header-area">
+			<!-- Top Header Area Deleted -->
+
+
+			<!-- Navbar Area -->
+			<div class="vizew-main-menu" id="sticker">
+				<div class="classy-nav-container breakpoint-off">
+					<div class="container">
+
+						<!-- Menu -->
+						<nav class="classy-navbar justify-content-between" id="vizewNav">
+
+							<!-- Nav brand -->
+							<a href="../../../index.html" class="nav-brand"><img src="../../../img/core-img/logo.png" alt=""></a>
+
+							<!-- Navbar Toggler -->
+							<div class="classy-navbar-toggler">
+								<span class="navbarToggler"><span></span><span></span><span></span></span>
+							</div>
+
+							<div class="classy-menu">
+
+								<!-- Close Button -->
+								<div class="classycloseIcon">
+									<div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+								</div>
+
+								<!-- Nav Start -->
+								<div class="classynav">
+									<ul>
+										<li><a href="../../../index.html">Home</a></li>
+										<li><a href="../../about.html">About Us</a></li>
+										<li class="active"><a href="#">Subject</a>
+											<ul class="dropdown">
+												<li><a href="../../django/blog/blog-grid.html">- Django</a></li>
+												<li><a href="../../mongodb/blog/blog-grid.html">- MongoDB</a></li>
+												<li><a href="../../hadoop/blog/blog-grid.html">- Hadoop</a></li>
+												<li><a href="../../testing/blog/blog-grid.html">- Testing</a></li>
+											</ul>
+										</li>
+										<li><a href="../../team.html">Team</a></li>
+										<li><a href="../../contact.html">Contact</a></li>
+									</ul>
+								</div>
+								<!-- Nav End -->
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- ##### Header Area End ##### -->
+
+		<!-- ##### Breadcrumb Area Start ##### -->
+		<div class="vizew-breadcrumb">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="../../../../C3 Website/index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+									<li class="breadcrumb-item"><i aria-hidden="true"></i> Subject</li>
+								<li class="breadcrumb-item"><a href="blog-grid.html">Django</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Introduction to Django</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ##### Breadcrumb Area End ##### -->
+
+		<!-- ##### Pager Area Start ##### -->
+
+		<!-- ##### Pager Area End ##### -->
+
+		<!-- ##### Post Details Area Start ##### -->
+		<section class="post-details-area mb-80">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="post-details-thumb mb-50">
+							<img src="../../../img/django/pydjango.png" alt=""  width="500%" >
+						</div>
+					</div>
+				</div>
+
+				<div class="row justify-content-center">
+					<!-- Post Details Content Area -->
+					<div class="col-12 col-lg-12 col-xl-12">
+						<div class="post-details-content">
+							<!-- Blog Content -->
+							<div class="blog-content">
+
+								<!-- Post Content -->
+								<div class="section-heading">
+									<h4>
+										Introduction to Django
+									</h4>
+									<div class="line"></div>
+								</div>
+
+								<br>
+								<!-- Table Content of Hadoop Installation -->
+								<p> When it comes to web development back-ends, there are many alternatives, from PHP, Java and C# to GoLang and Ruby. Python also has many options to implement a powerful web application service. One of the most used web frameworks is Django.
+
+									Django provides a full featured web development framework, and automated tools for a straightforward development.<br/>
+									If you have installed python in your system, you only need to run the Django package installation using pip:
+								</p>
+
+								<code>
+									> pip install Django
+								</code><br>
+
+								<h5>Create the Base Django Web Application</h5>
+										<p>Django comes with a command line tool to create Django projects from scratch. The main command is django-admin.</p>
+										<code>
+											> django-admin startproject webapp
+										</code><br>
+										<p>This command will create a new web application folder named <b>webapp</b>.</p>
+										<p>In the base folder there is a file created with name manage.py. This file is the project management script for your application.</p>
+										<code>
+											> python manage.py [command]
+										</code><br>
+										<p>There are many commands available for the project management (the most used are in bold letters). You can see all options, when you runpython manage.py(without additional parameters):
+										</p>
+
+								<h5>Run the application for the first time</h5>
+								<p>After creating the Django project, you can run the default application with no additional coding. Run the command runserver.</p>
+								<code>
+									> python manage.py runserver
+								</code>
+								<br>
+								<p>This will start a local webserver at <b>http://localhost:8000/</b></p>
+								<img src="../../../img/django/django2.png" alt="" width="70%" style="display: block; margin:auto"><br>
+
+								<h5>Creating an App inside your project</h5>
+								<p>You have created a main Django project (webapp). Now, you can create an application inside your project. Each application is like a separated application module within the same project. The command to create a new application is:</p>
+								<code> > python manage.py startapp {appname}</code>
+								<p>Where {appname} is the application name (python manage.py startapp example). When you execute this command, a new folder (example) is created along with the project folder (webapp)</p>
+
+								<h5>Creating Views</h5>
+								<p>Actually, you have only an initial home page and the admin/ interface. You can create your own initial page, adding a view and creating a route.<br>
+									Edit the View file views.py inside your web application folder (example/views.pyin this example) to manage requests for an index page:</p>
+								<code>from django.shortcuts import render<br>
+									  from django.http import HttpResponse<br><br>
+
+									  def index(request):<br>
+										<div style="margin-left:15px;">return HttpResponse("Hello World")</div>
+								</code><br>
+
+								<p>This code uses the <b>HttpResponse</b> function to output a "Hello world" message to the browser client. The render function will be used in the next section.<br>
+								Now, <b>create a new Route</b> inside the urls.py file of the project folder (webapp/urls.py), to direct request for the root site to your <i>index()</i> function.</p>
+
+								<code>
+										from example import views<br><br>
+
+										urlpatterns = [<br>
+											<div style="margin-left:15px;">path('admin/', admin.site.urls),<br>
+											path('', views.index)</div>
+										]
+								</code><br>
+
+								<p>The first line imports the views.py from the current application folder (example), as views object in the current context.<br>
+								Then, you can specify a new route path ‘’ (root path) in urlpatterns, mapped to respond with the result of views.index (views.py, function index())<br>
+								Now, when you run your server (python manage.py runserver) you can view your new home page in <b>http://localhost:8000/</b><br>
+								</p>
+
+								<code>http://localhost:8000/ <br>
+									<h1>Hello World</h1>
+								</code><br>
+
+								<h5>Conclusion</h5>
+								<p>In this post we created a Python web application with Django following this commands:</p>
+
+								<h6>Create the main web server project and start running the service:</h6>
+								<div class ="container">
+								<ol>
+									<li>Run <b>django-admin startproject webapp</b></li>
+									<li>Execute <b>cd webapp</b> to change to the project folder</li>
+									<li>Run <b>python manage.py migrate</b></li>
+									<li>Finally, run <b>python manage.py runserver</b></li>
+								</ol>
+							</div>
+
+								<h6>Create an application inside the project:</h6>
+									<div class ="container">
+								<ol>
+									<li>Run <b>python manage.py startapp example</b> to create the application folder</li>
+									<li>Edit the file <b>example/views.py</b> to create an <i>index()</i> function</li>
+									<li>Add in <b>webapp/urls.py</b> a new route path in urlpatterns</li>
+									<li>Modify <b>webapp/settings.py</b> to add the application</li>
+								</ol>
+							</div>
+								<!-- END of Table Content -->
+								<!-- Post Tags Removed-->
+
+
+								<!-- Post Author -->
+								<div class="vizew-post-author d-flex align-items-center py-5">
+									<!-- <div class="post-author-thumb">
+										<img src="../../../img/bg-img/30.jpg" alt="">
+									</div> -->
+									<div class="post-author-desc pl-4">
+										<a href="#" class="author-name">Francisco Igor</a>
+										<p>Programming from the past century. Worked with many programming languages and software development tools for desktop, web and mobile.</p>
+										<div class="post-author-social-info">
+										Ref.:<a href="https://medium.com/@franciscoigor/web-applications-using-python-and-django-33a5461dfbb1">https://medium.com/@franciscoigor/web-applications-using-python-and-django-33a5461dfbb1</a>
+										</div>
+									</div>
+								</div>
+
+								<!--    REMOVED Related Post Area REMOVED   -->
+
+
+								<!--    REMOVED Comment Area Start REMOVED  -->
+
+
+								<!--    REMOVED Post A Comment Area REMOVED -->
+
+
+							</div>
+						</div>
+					</div>
+
+					<!--REMOVED Sidebar Widget REMOVED-->
+
+				</div>
+			</div>
+		</section>
+		<!-- ##### Post Details Area End ##### -->
+
+		<!-- ##### Footer Area Start ##### -->
+		<footer class="footer-area">
+			<div class="container">
+				<div class="row">
+					<!-- Footer Widget Area -->
+					<div class="col-12 col-sm-6 col-xl-4">
+						<div class="footer-widget mb-30">
+							<!-- Logo -->
+							<a href="../../../index.html" class="foo-logo d-block mb-4 text-center"><img src="../../../img/core-img/logo2.png" alt=""></a>
+							<p>Creating a technical atmosphere amongst the student. Enhancing student’s analytical and technical thinking. Making students industry ready by keeping them up-to-date with industry standard technologies.
+							</p>
+						</div>
+					</div>
+
+					<!-- Footer Widget Area -->
+
+					<!-- Footer Widget Area -->
+					<div class="col-12 col-sm-6 col-xl-3 offset-xl-1">
+						<div class="footer-widget mb-30">
+							<h6 class="widget-title">Reach Us</h6>
+
+							<!-- Single Blog Post -->
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.6598743524723!2d72.82654491438136!3d19.38387464726096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7aec0a4b41bef%3A0xbd1a4ca919d6a613!2sVidyavardhini&#39;s+College+of+Engineering+and+Technology!5e0!3m2!1sen!2sin!4v1552972733009" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+							<!-- Single Blog Post -->
+
+						</div>
+					</div>
+
+					<!-- Footer Widget Area -->
+					<div class="col-12 col-sm-6 col-xl-3 offset-xl-1">
+						<div class="footer-widget mb-30">
+							<h6 class="widget-title">Our Aim</h6>
+							<!-- Contact Address -->
+							<div class="contact-address">
+								<p>C3 is a peer to peer learning group, which focuses on teaching and learning
+									various skills and sharing expertise among the students for a
+									cumulative growth of the community</p>
+
+							</div>
+							<!-- Footer Social Area -->
+							<div class="footer-social-area">
+								<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+								<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+								<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+								<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+								<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Copywrite Area -->
+			<div class="copywrite-area">
+				<div class="container">
+					<div class="row align-items-center">
+						<!-- Copywrite Text -->
+						<div class="col-12 col-sm-6">
+							<p class="copywrite-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="" target="_blank">Core Coding Committee</a>
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+							</div>
+						<div class="col-12 col-sm-6">
+							<nav class="footer-nav">
+								<ul>
+									<li><a href="../../../index.html">Home</a></li>
+									<li><a href="../../about.html">About</a></li>
+									<li><a href="../../django/blog/blog-grid.html">Subject</a></li>
+									<li><a href="../../team.html">Team</a></li>
+									<li><a href="../../contact.html">Contact</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- ##### Footer Area End ##### -->
+
+		<!-- ##### All Javascript Script ##### -->
+		<!-- jQuery-2.2.4 js -->
+		<script src="../../../js/jquery/jquery-2.2.4.min.js"></script>
+		<!-- Popper js -->
+		<script src="../../../js/bootstrap/popper.min.js"></script>
+		<!-- Bootstrap js -->
+		<script src="../../../js/bootstrap/bootstrap.min.js"></script>
+		<!-- All Plugins js -->
+		<script src="../../../js/plugins/plugins.js"></script>
+		<!-- Active js -->
+		<script src="../../../js/active.js"></script>
+	</body>
+
+</html>

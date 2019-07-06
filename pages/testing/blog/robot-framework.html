@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<!-- Title -->
+		<title>C3 - Testing Blogs - Robot Framework</title>
+
+		<!-- Favicon -->
+		<link rel="icon" href="../../../img/core-img/favicon.ico">
+
+		<!-- Stylesheet -->
+		<link rel="stylesheet" href="../../../style.css">
+
+		<style>
+			code {
+				background-color: #212121;
+				display: block;
+				width: 100%;
+				padding: 10px 15px;
+				color: #db4437;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!-- Preloader -->
+		<div class="preloader d-flex align-items-center justify-content-center">
+			<div class="lds-ellipsis">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- ##### Header Area Start ##### -->
+		<header class="header-area">
+			<!-- Top Header Area Deleted -->
+
+
+			<!-- Navbar Area -->
+			<div class="vizew-main-menu" id="sticker">
+				<div class="classy-nav-container breakpoint-off">
+					<div class="container">
+
+						<!-- Menu -->
+						<nav class="classy-navbar justify-content-between" id="vizewNav">
+
+							<!-- Nav brand -->
+							<a href="../../../index.html" class="nav-brand"><img src="../../../img/core-img/logo.png" alt=""></a>
+
+							<!-- Navbar Toggler -->
+							<div class="classy-navbar-toggler">
+								<span class="navbarToggler"><span></span><span></span><span></span></span>
+							</div>
+
+							<div class="classy-menu">
+
+								<!-- Close Button -->
+								<div class="classycloseIcon">
+									<div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+								</div>
+
+								<!-- Nav Start -->
+								<div class="classynav">
+									<ul>
+										<li><a href="../../../index.html">Home</a></li>
+										<li><a href="../../about.html">About Us</a></li>
+										<li class="active"><a href="#">Subject</a>
+											<ul class="dropdown">
+												<li><a href="../../django/blog/blog-grid.html">- Django</a></li>
+												<li><a href="../../mongodb/blog/blog-grid.html">- MongoDB</a></li>
+												<li><a href="../../hadoop/blog/blog-grid.html">- Hadoop</a></li>
+												<li><a href="../../testing/blog/blog-grid.html">- Testing</a></li>
+											</ul>
+										</li>
+										<li><a href="../../team.html">Team</a></li>
+										<li><a href="../../contact.html">Contact</a></li>
+									</ul>
+								</div>
+								<!-- Nav End -->
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- ##### Breadcrumb Area Start ##### -->
+		<div class="vizew-breadcrumb">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="../../../index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Subject</li>
+								<li class="breadcrumb-item"><a href="blog-grid.html">Testing</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Robot Framework</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ##### Breadcrumb Area End ##### -->
+
+		<section class="post-details-area mb-80">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="post-details-thumb mb-50 text-center">
+							<img src="../../../img/testing/robot-framework.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+				<div class="row justify-content-center">
+					<!-- Post Details Content Area -->
+					<div class="col-12 col-lg-12 col-xl-12">
+						<div class="post-details-content">
+							<!-- Blog Content -->
+							<div class="blog-content">
+
+								<!-- Post Content -->
+								<div class="section-heading">
+									<h4>
+										Robot Framework
+									</h4>
+									<div class="line"></div>
+								</div>
+
+								<br>
+								<!-- Table Content of Hadoop Installation -->
+
+								<!--  1 --->
+
+								<h5>What is Robot Framework ?</h5>
+
+								<p>Robot Framework is a generic open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has easy-to-use tabular test data syntax and it utilizes the keyword-driven testing approach. Its testing capabilities can be extended by test libraries implemented either with Python or Java, and users can create new higher-level keywords from existing ones using the same syntax that is used for creating test cases.
+								</p>
+								<p>Robot Framework project is hosted on GitHub where you can find further documentation, source code, and issue tracker. Downloads are hosted at PyPI. The framework has a rich ecosystem around it consisting of various generic test libraries and tools that are developed as separate projects
+								</p>
+								<p>Robot Framework is operating system and application independent. The core framework is implemented using Python and runs also on Jython (JVM) and IronPython (.NET).
+								</p>
+								<p>Robot Framework itself is open source software released under Apache License 2.0, and most of the libraries and tools in the ecosystem are also open source. The framework was initially developed at Nokia Networks and it is nowadays sponsored by Robot Framework Foundation.
+								</p>
+								<code>
+								<pre style='color:#d1d1d1;'><span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>**</span>code<span style='color:#d2cd86; '>:</span><span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>**</span>
+<span style='color:#e66170; font-weight:bold; '>import</span> re
+<span style='color:#e66170; font-weight:bold; '>import</span> requests
+<span style='color:#e66170; font-weight:bold; '>import</span> base64
+
+<span style='color:#e66170; font-weight:bold; '>from</span> robot<span style='color:#d2cd86; '>.</span>api <span style='color:#e66170; font-weight:bold; '>import</span> logger
+<span style='color:#e66170; font-weight:bold; '>from</span> robot<span style='color:#d2cd86; '>.</span>libraries<span style='color:#d2cd86; '>.</span>BuiltIn <span style='color:#e66170; font-weight:bold; '>import</span> BuiltIn
+
+<span style='color:#e66170; font-weight:bold; '>def</span> report_testingbot_status<span style='color:#d2cd86; '>(</span>name<span style='color:#d2cd86; '>,</span> status<span style='color:#d2cd86; '>,</span> credentials<span style='color:#d2cd86; '>)</span><span style='color:#d2cd86; '>:</span>
+	selenium <span style='color:#d2cd86; '>=</span> BuiltIn<span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span><span style='color:#d2cd86; '>.</span>get_library_instance<span style='color:#d2cd86; '>(</span><span style='color:#00c4c4; '>'SeleniumLibrary'</span><span style='color:#d2cd86; '>)</span>
+	session_id <span style='color:#d2cd86; '>=</span> selenium<span style='color:#d2cd86; '>.</span>_current_browser<span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span><span style='color:#d2cd86; '>.</span>session_id
+
+	token <span style='color:#d2cd86; '>=</span> base64<span style='color:#d2cd86; '>.</span>b64encode<span style='color:#d2cd86; '>(</span>credentials<span style='color:#d2cd86; '>)</span>
+	payload <span style='color:#d2cd86; '>=</span> <span style='color:#b060b0; '>{</span><span style='color:#00c4c4; '>'test[name]'</span><span style='color:#d2cd86; '>:</span> name<span style='color:#d2cd86; '>,</span> <span style='color:#00c4c4; '>'test[success]'</span><span style='color:#d2cd86; '>:</span> <span style='color:#e66170; font-weight:bold; '>int</span><span style='color:#d2cd86; '>(</span>status <span style='color:#00dddd; '>==</span> <span style='color:#00c4c4; '>'PASS'</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>}</span>
+	headers <span style='color:#d2cd86; '>=</span> <span style='color:#b060b0; '>{</span><span style='color:#00c4c4; '>'Authorization'</span><span style='color:#d2cd86; '>:</span> <span style='color:#00c4c4; '>'Basic {0}'</span><span style='color:#d2cd86; '>.</span>format<span style='color:#d2cd86; '>(</span>token<span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>}</span>
+
+	url <span style='color:#d2cd86; '>=</span> <span style='color:#00c4c4; '>'https://api.testingbot.com/v1/tests/{0}'</span><span style='color:#d2cd86; '>.</span>format<span style='color:#d2cd86; '>(</span>session_id<span style='color:#d2cd86; '>)</span>
+	response <span style='color:#d2cd86; '>=</span> requests<span style='color:#d2cd86; '>.</span>put<span style='color:#d2cd86; '>(</span>url<span style='color:#d2cd86; '>,</span> data<span style='color:#d2cd86; '>=</span>payload<span style='color:#d2cd86; '>,</span> headers<span style='color:#d2cd86; '>=</span>headers<span style='color:#d2cd86; '>)</span>
+	<span style='color:#e66170; font-weight:bold; '>assert</span> response<span style='color:#d2cd86; '>.</span>status_code <span style='color:#00dddd; '>==</span> <span style='color:#00a800; '>200</span><span style='color:#d2cd86; '>,</span> response<span style='color:#d2cd86; '>.</span>text
+	
+	<span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>*</span>
+	
+<span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>**</span>Check success <span style='color:#e66170; font-weight:bold; '>or</span> faliure<span style='color:#d2cd86; '>:</span><span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>**</span>
+
+<span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>*</span> Settings <span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>*</span>
+
+Library  SeleniumLibrary
+Library  TestingBot
+
+Test Setup  <span style='color:#e66170; font-weight:bold; '>Open</span> test browser
+Test Teardown  Close test browser
+
+<span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>*</span> Variables <span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>*</span>
+
+$<span style='color:#b060b0; '>{</span>CREDENTIALS<span style='color:#b060b0; '>}</span>  key<span style='color:#d2cd86; '>:</span>secret
+
+<span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>*</span> Test Cases <span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>*</span>
+
+Simple Test
+	Go to  https<span style='color:#d2cd86; '>:</span><span style='color:#00dddd; '>//</span>www<span style='color:#d2cd86; '>.</span>google<span style='color:#d2cd86; '>.</span>com
+	Page should contain  Google
+
+<span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>*</span> Keywords <span style='color:#00dddd; '>**</span><span style='color:#00dddd; '>*</span>
+
+<span style='color:#e66170; font-weight:bold; '>Open</span> test browser
+	<span style='color:#e66170; font-weight:bold; '>Open</span> browser  about<span style='color:#d2cd86; '>:</span>  firefox
+	<span style='color:#d2cd86; '>.</span><span style='color:#d2cd86; '>.</span><span style='color:#d2cd86; '>.</span>  remote_url<span style='color:#d2cd86; '>=</span>http<span style='color:#d2cd86; '>:</span><span style='color:#00dddd; '>//</span>$<span style='color:#b060b0; '>{</span>CREDENTIALS<span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>@</span>hub<span style='color:#d2cd86; '>.</span>testingbot<span style='color:#d2cd86; '>.</span>com<span style='color:#00dddd; '>/</span>wd<span style='color:#00dddd; '>/</span>hub
+	<span style='color:#d2cd86; '>.</span><span style='color:#d2cd86; '>.</span><span style='color:#d2cd86; '>.</span>  desired_capabilities<span style='color:#d2cd86; '>=</span>browserName<span style='color:#d2cd86; '>:</span>$<span style='color:#b060b0; '>{</span>BROWSER<span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>version<span style='color:#d2cd86; '>:</span>$<span style='color:#b060b0; '>{</span>VERSION<span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>,</span>platform<span style='color:#d2cd86; '>:</span>$<span style='color:#b060b0; '>{</span>PLATFORM<span style='color:#b060b0; '>}</span>
+
+Close test browser
+	<span style='color:#d2cd86; '>.</span><span style='color:#d2cd86; '>.</span><span style='color:#d2cd86; '>.</span>  Report TestingBot status
+	<span style='color:#d2cd86; '>.</span><span style='color:#d2cd86; '>.</span><span style='color:#d2cd86; '>.</span>  $<span style='color:#b060b0; '>{</span>SUITE_NAME<span style='color:#b060b0; '>}</span> <span style='color:#00dddd; '>|</span> $<span style='color:#b060b0; '>{</span>TEST_NAME<span style='color:#b060b0; '>}</span>
+	<span style='color:#d2cd86; '>.</span><span style='color:#d2cd86; '>.</span><span style='color:#d2cd86; '>.</span>  $<span style='color:#b060b0; '>{</span>TEST_STATUS<span style='color:#b060b0; '>}</span>  $<span style='color:#b060b0; '>{</span>CREDENTIALS<span style='color:#b060b0; '>}</span>
+	Close <span style='color:#e66170; font-weight:bold; '>all</span> browsers
+</pre>
+								</code>
+								<div class="vizew-post-author d-flex align-items-center py-5">
+									<div class="post-author-thumb">
+										<img src="../../../img/team/aditya.jpg" alt="">
+									</div>
+									<div class="post-author-desc pl-4">
+										<a href="#" class="author-name">Aditya Manze</a>
+										<p>References - Introduction to Robot Framework<br> URL: https://robotframework.org/</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ##### Footer Area Start ##### -->
+		<footer class="footer-area">
+			<div class="container">
+				<div class="row">
+					<!-- Footer Widget Area -->
+					<div class="col-12 col-sm-6 col-xl-4">
+						<div class="footer-widget mb-30">
+							<!-- Logo -->
+							<a href="../../../index.html" class="foo-logo d-block mb-4 text-center"><img src="../../../img/core-img/logo2.png" alt=""></a>
+							<p>Creating a technical atmosphere amongst the student. Enhancing student’s analytical and technical thinking. Making students industry ready by keeping them up-to-date with industry standard technologies.
+							</p>	
+						</div>
+					</div>
+
+					<!-- Footer Widget Area -->
+
+					<!-- Footer Widget Area -->
+					<div class="col-12 col-sm-6 col-xl-3 offset-xl-1">
+						<div class="footer-widget mb-30">
+							<h6 class="widget-title">Reach Us</h6>
+
+							<!-- Single Blog Post -->
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.6598743524723!2d72.82654491438136!3d19.38387464726096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7aec0a4b41bef%3A0xbd1a4ca919d6a613!2sVidyavardhini&#39;s+College+of+Engineering+and+Technology!5e0!3m2!1sen!2sin!4v1552972733009" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+							<!-- Single Blog Post -->
+
+						</div>
+					</div>
+
+					<!-- Footer Widget Area -->
+					<div class="col-12 col-sm-6 col-xl-3 offset-xl-1">
+						<div class="footer-widget mb-30">
+							<h6 class="widget-title">Our Aim</h6>
+							<!-- Contact Address -->
+							<div class="contact-address">
+								<p>C3 is a peer to peer learning group, which focuses on teaching and learning 
+									various skills and sharing expertise among the students for a 
+									cumulative growth of the community</p>
+
+							</div>
+							<!-- Footer Social Area -->
+							<div class="footer-social-area">
+								<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+								<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+								<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+								<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+								<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Copywrite Area -->
+			<div class="copywrite-area">
+				<div class="container">
+					<div class="row align-items-center">
+						<!-- Copywrite Text -->
+						<div class="col-12 col-sm-6">
+							<p class="copywrite-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="" target="_blank">Core Coding Committee</a>
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+						</div>
+						<div class="col-12 col-sm-6">
+							<nav class="footer-nav">
+								<ul>
+									<li><a href="../../../index.html">Home</a></li>
+									<li><a href="../../about.html">About</a></li>
+									<li><a href="../../django/blog/blog-grid.html">Subject</a></li>
+									<li><a href="../../team.html">Team</a></li>
+									<li><a href="../../contact.html">Contact</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- ##### Footer Area End ##### -->
+
+		<!-- ##### All Javascript Script ##### -->
+		<!-- jQuery-2.2.4 js -->
+		<script src="../../../js/jquery/jquery-2.2.4.min.js"></script>
+		<!-- Popper js -->
+		<script src="../../../js/bootstrap/popper.min.js"></script>
+		<!-- Bootstrap js -->
+		<script src="../../../js/bootstrap/bootstrap.min.js"></script>
+		<!-- All Plugins js -->
+		<script src="../../../js/plugins/plugins.js"></script>
+		<!-- Active js -->
+		<script src="../../../js/active.js"></script>
+	</body>
+
+</html>

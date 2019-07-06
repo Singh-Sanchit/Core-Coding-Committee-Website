@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<!-- Title -->
+		<title>C3 - Hadoop 3.1 Single-Node Installation</title>
+
+		<!-- Favicon -->
+		<link rel="icon" href="../../../img/core-img/favicon.ico">
+
+		<!-- Stylesheet -->
+		<link rel="stylesheet" href="../../../style.css">
+
+		<style>
+			code {
+				background-color: #212121;
+				display: block;
+				width: 100%;
+				padding: 10px 15px;
+				color: #db4437;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!-- Preloader -->
+		<div class="preloader d-flex align-items-center justify-content-center">
+			<div class="lds-ellipsis">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- ##### Header Area Start ##### -->
+		<header class="header-area">
+			<!-- Top Header Area Deleted -->
+
+
+			<!-- Navbar Area -->
+			<div class="vizew-main-menu" id="sticker">
+				<div class="classy-nav-container breakpoint-off">
+					<div class="container">
+
+						<!-- Menu -->
+						<nav class="classy-navbar justify-content-between" id="vizewNav">
+
+							<!-- Nav brand -->
+							<a href="../../../index.html" class="nav-brand"><img src="../../../img/core-img/logo.png" alt=""></a>
+
+							<!-- Navbar Toggler -->
+							<div class="classy-navbar-toggler">
+								<span class="navbarToggler"><span></span><span></span><span></span></span>
+							</div>
+
+							<div class="classy-menu">
+
+								<!-- Close Button -->
+								<div class="classycloseIcon">
+									<div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+								</div>
+
+								<!-- Nav Start -->
+								<div class="classynav">
+									<ul>
+										<li><a href="../../../index.html">Home</a></li>
+										<li><a href="../../about.html">About Us</a></li>
+										<li class="active"><a href="#">Subject</a>
+											<ul class="dropdown">
+												<li><a href="../../django/blog/blog-grid.html">- Django</a></li>
+												<li><a href="../../mongodb/blog/blog-grid.html">- MongoDB</a></li>
+												<li><a href="../../hadoop/blog/blog-grid.html">- Hadoop</a></li>
+												<li><a href="../../testing/blog/blog-grid.html">- Testing</a></li>
+											</ul>
+										</li>
+										<li><a href="../../team.html">Team</a></li>
+										<li><a href="../../contact.html">Contact</a></li>
+									</ul>
+								</div>
+								<!-- Nav End -->
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- ##### Header Area End ##### -->
+
+		<!-- ##### Breadcrumb Area Start ##### -->
+		<div class="vizew-breadcrumb">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="./../../../index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+								<li class="breadcrumb-item">Subject</li>
+								<li class="breadcrumb-item"><a href="./blog-grid.html">Hadoop</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Installation of Hadoop 3.1 Single-Node Cluster</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ##### Breadcrumb Area End ##### -->
+
+		<!-- ##### Pager Area Start ##### -->
+
+		<!-- ##### Pager Area End ##### -->
+
+		<!-- ##### Post Details Area Start ##### -->
+		<section class="post-details-area mb-80">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="post-details-thumb mb-50 text-center">
+							<img src="../../../img/hadoop/hadoop.png" alt="">
+						</div>
+					</div>
+				</div>
+
+				<div class="row justify-content-center">
+					<!-- Post Details Content Area -->
+					<div class="col-12 col-lg-12 col-xl-12">
+						<div class="post-details-content">
+							<!-- Blog Content -->
+							<div class="blog-content">
+
+								<!-- Post Content -->
+								<div class="section-heading">
+									<h4>
+										Installation of Hadoop 3.1 Single-Node Cluster
+									</h4>
+									<div class="line"></div>
+								</div>
+								<p style='text-indent:35px;'> Apache Hadoop 3.1 have noticeable improvements any many bug fixes over the previous stable 3.0 releases. This version has many improvements in HDFS and MapReduce. This how-to guide will help you to setup Hadoop 3.1.0 Single-Node Cluster on CentOS/RHEL 7/6/5, Ubuntu 18.04, 17.10, 16.04 & 14.04, Debian 9/8/7 and LinuxMint Systems. This article has been tested with Ubuntu 18.04 LTS.
+								</p>
+								<br>
+								<!-- Table Content of Hadoop Installation -->
+
+								<h5>1. Prerequisites</h5>
+								<p> Java is the primary requirement for running Hadoop on any system, So make sure you have
+									Java installed on your system using the following command. If you don’t have Java
+									installed on your system, use one of the following links to install it first. Hadoop
+									supports only JAVA 8 If already any other version is present then uninstall the
+									following using these commands.
+								</p>
+								<code>
+									sudo apt-get purge openjdk-\* icedtea-\* icedtea6-\* <br>
+									OR <br>
+									sudo apt remove openjdk-8-jdk <br>
+								</code><br>
+
+								<ul>
+									<li>
+										<h6>Step 1.1 – Install Oracle Java 8 on Ubuntu</h6>
+										<p>You need to enable additional repository to your system to install Java 8 on
+											Ubuntu VPS. After that install Oracle Java 8 on an Ubuntu system using
+											apt-get.This repository contains a package named oracle-java8-installer, Which
+											is notan actual Java package. Instead of that, this package contains a script
+											toinstall Java on Ubuntu.Run below commands to install Java 8 on Ubuntu and
+											LinuxMint.</p>
+										<code>
+											sudo add-apt-repository ppa:webupd8team/java <br>
+											sudo apt-get <br>
+											sudo apt-get install oracle-java8-installer <br>
+											OR <br>
+											sudo apt install openjdk-8-jre-headless <br>
+											sudo apt install openjdk-8-jdk <br>
+										</code><br>
+									</li>
+									<li>
+										<h6>Step 1.2 – Verify Java Inatallation</h6>
+										<p>The apt repository also provides package oracle-java8-set-default to set Java 8
+											as your default Java version. This package will be installed along with Java
+											installation. To make sure run below command.</p>
+										<code>
+											sudo apt-get install oracle-java8-set-default
+										</code><br>
+										<p>
+											After successfully installing Oracle Java 8 using the above steps, Let’s verify
+											the installed version using the following command.
+										</p>
+										<code>
+											java -version <br>
+											java version "1.8.0_201" <br>
+											Java(TM) SE Runtime Environment (build 1.8.0_201-b09) <br>
+											Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode) <br>
+										</code><br>
+									</li>
+									<li>
+										<h6>Step 1.3 – Setup JAVA_HOME and JRE_HOME Variable</h6>
+										<p>Add the java path to JAVA_HOME variable in .bashrc file. Go to your home
+											directory and in the folder option click on show hidden files. After that a
+											.bashrc file will be present, open the file and add the following line at the
+											end.
+										</p>
+										<p class="text-danger">NOTE- Path of the java will be your pc path on which java is
+											been installed.</p>
+										<code>
+											export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+										</code><br><br>
+										<p class="text-danger">NOTE- After doing all changes and saving the file run the
+											following command to make changes through the .bashrc file.</p>
+										<code>source ~/.bashrc</code><br>
+										<p>
+											All done, you have successfully installed Java 8 on a Linux system.
+										</p>
+									</li>
+								</ul>
+
+								<h5>2. Create Hadoop User</h5>
+								<p>We recommend creating a normal (nor root) account for Hadoop working. To create an
+									account using the following command.</p>
+								<code>
+									adduser hadoop <br>
+									passwd hadoop <br>
+								</code>
+
+								<p>Set up a new user for Hadoop working separately other than the normal users. <br><span
+																																						class="text-danger">NOTE- Its compulsory to create a sperate user with username
+									hadoop otherwise it may give you path file issues later. </span> <br> Also run
+									these commands from an admin privileged user present on the machine.</p>
+								<code>sudo adduser Hadoop sudo</code>
+								<p>Command – sudo adduser hadoop sudo If you have already created the user and want to give
+									sudo/root privileges to it then run the following command.</p>
+								<code>sudo usermod -a -G sudo hadoop</code>
+								<p>Otherwise you can directly edit the permission lines in sudoers file. Go to the root
+									access by running</p>
+								<code>sudo -I or su- &lt;username&gt;</code>
+								<p>Type the following command and add the below line to the file.</p>
+								<code>visudo</code>
+								<p>Add following lines to the file.</p>
+								<code>hadoop ALL=(ALL:ALL) ALL</code>
+								<p>After creating the account, it also required to set up key-based ssh to its own account.
+									To do this use execute following commands.</p>
+								<code>su - hadoop <br>
+									ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa <br>
+									cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys <br>
+									chmod 0600 ~/.ssh/authorized_keys</code>
+								<p>Let’s verify key based login. Below command should not ask for the password but the
+									first time it will prompt for adding RSA to the list of known hosts.</p>
+								<code>ssh localhost <br>
+									exit</code>
+								<p>Disable all firewall restriction</p>
+								<code>sudo ufw disable</code>
+								<p>If above command doesn’t work then go with.</p>
+								<code>service iptables stop <br>
+									OR <br>
+									sudo chkconfig iptables off</code>
+								<p>Sometimes it’s better to manage firewall using a third party software. Ex. yast</p>
+
+
+								<!-- 3 -->
+								<h5>
+									3. Download Hadoop 3.1 Archive
+								</h5>
+								<p>
+									In this step, download hadoop 3.1 source archive file using below command. You can also
+									select alternate download mirror for increasing download speed.
+								</p>
+								<code>
+									cd ~ <br>
+									wget http://www-eu.apache.org/dist/hadoop/common/hadoop-3.1.0/hadoop-3.1.0.tar.gz  <br>
+									tar xzf hadoop-3.1.0.tar.gz <br>
+									mv hadoop-3.1.0 hadoop <br>
+								</code>
+								<!-- End 3 -->
+
+								<!-- 4 -->
+								<h5>
+									4. Setup Hadoop Pseudo-Distributed Mode
+								</h5>
+								<h6>
+									4.1. Setup Hadoop Environment Variables
+								</h6>
+								<p>
+									First, we need to set environment variable uses by Hadoop. Edit ~/.bashrc file and
+									append following values at end of file.
+								</p>
+
+								<code>
+									export HADOOP_HOME=/home/hadoop/hadoop <br>
+									export HADOOP_INSTALL=$HADOOP_HOME <br>
+									export HADOOP_MAPRED_HOME=$HADOOP_HOME <br>
+									export HADOOP_COMMON_HOME=$HADOOP_HOME <br>
+									export HADOOP_HDFS_HOME=$HADOOP_HOME <br>
+									export YARN_HOME=$HADOOP_HOME <br>
+									export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native <br>
+									export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin <br>
+								</code>
+
+								<p>
+									Now apply the changes in the current running environment
+								</p>
+								<code>source ~/.bashrc <br></code>
+
+								<p>
+									Now edit $HADOOP_HOME/etc/hadoop/hadoop-env.sh file and set JAVA_HOME environment
+									variable. Change the JAVA path as per install on your system. This path may vary as per
+									your operating system version and installation source. So make sure you are using
+									correct path.
+									export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+								</p>
+								<h6>
+									4.2. Setup Hadoop Configuration Files
+								</h6>
+								<p>
+									Hadoop has many of configuration files, which need to configure as per requirements of
+									your Hadoop infrastructure. Let’s start with the configuration with basic Hadoop single
+									node cluster setup. first, navigate to below location
+								</p>
+
+								<code>cd $HADOOP_HOME/etc/hadoop <br></code>
+								<p>
+									Edit core-site.xml
+								</p>
+								<code>
+									&lt;configuration&gt;<br>
+									&lt;property&gt;<br>
+									&lt;name&gt;fs.default.name&lt;/name&gt;<br>
+									&lt;value>hdfs://localhost:9000&lt;/value&gt; <br>
+									&lt;/property&gt;<br>
+									&lt;/configuration&gt;<br>
+								</code>
+
+								<p>
+									Edit hdfs-site.xml
+								</p>
+								<code>
+									&lt;configuration&gt; <br>
+									&lt;property&gt; <br>
+									&lt;name&gt;dfs.replication&lt;/name&gt; <br>
+									&lt;value&gt;1&lt;/value&gt; <br>
+									&lt;/property&gt; <br>
+									&lt;property&gt; <br>
+									&lt;name&gt;dfs.name.dir&lt;/name&gt; <br>
+									&lt;value&gt;file:///home/hadoop/hadoopdata/hdfs/namenode&lt;/value&gt; <br>
+									&lt;/property&gt; <br>
+									&lt;property&gt; <br>
+									&lt;name&gt;dfs.data.dir&lt;/name&gt; <br>
+									&lt;value&gt;file:///home/hadoop/hadoopdata/hdfs/datanode&lt;/value&gt; <br>
+									&lt;/property&gt; <br>
+									&lt;/configuration&gt; <br>
+								</code>
+
+								<p>
+									Edit mapred-site.xml
+								</p>
+								<code>
+									&lt;configuration&gt; <br>
+									&lt;property&gt; <br>
+									&lt;name&gt;mapreduce.framework.name &lt;/name&gt;<br>
+									&lt;value&gt;yarn &lt;/value&gt; <br>
+									&lt;/property&gt; <br>
+									&lt;/configuration&gt; <br>
+								</code>
+
+								<p>
+									Edit yarn-site.xml
+								</p>
+								<code>
+									&lt;configuration&gt; <br>
+									&lt;property&gt; <br>
+									&lt;name&gt;yarn.nodemanager.aux-services &lt;/name&gt; <br>
+									&lt;value&gt;mapreduce_shuffle &lt;/value&gt; <br>
+									&lt;/property&gt; <br>
+									&lt;/configuration&gt; <br>
+								</code>
+
+								<h5>
+									4.3. Format Namenode
+								</h5>
+								<p>
+									Now format the namenode using the following command, make sure that Storage directory
+									is
+								</p>
+								<code>hdfs namenode -format <br></code>
+								<p>
+									Sample output:
+								</p>
+								<code>
+									WARNING: /home/hadoop/hadoop/logs does not exist. Creating. <br>
+									2018-05-02 17:52:09,678 INFO namenode.NameNode: STARTUP_MSG: <br>
+									/************************************************************ <br>
+									STARTUP_MSG: Starting NameNode <br>
+									STARTUP_MSG: host = localhost/127.0.1.1 <br>
+									STARTUP_MSG: args = [-format] <br>
+									STARTUP_MSG: version = 3.1.0 <br>
+									... <br>
+									... <br>
+									... <br>
+									2018-05-02 17:52:13,717 INFO common.Storage: Storage directory <br>
+									/home/hadoop/hadoopdata/hdfs/namenode has been successfully formatted. <br>
+									2018-05-02 17:52:13,806 INFO namenode.FSImageFormatProtobuf: Saving image file <br>
+									/home/hadoop/hadoopdata/hdfs/namenode/current/fsimage.ckpt_0000000000000000000 using no  <br>
+									compression <br>
+									2018-05-02 17:52:14,161 INFO namenode.FSImageFormatProtobuf: Image file <br>
+									/home/hadoop/hadoopdata/hdfs/namenode/current/fsimage.ckpt_0000000000000000000 of size <br>
+									391 bytes saved in 0 seconds . <br>
+									2018-05-02 17:52:14,224 INFO namenode.NNStorageRetentionManager: Going to retain 1 <br>
+									images with txid >= 0 <br>
+									2018-05-02 17:52:14,282 INFO namenode.NameNode: SHUTDOWN_MSG: <br>
+									/************************************************************ <br>
+									SHUTDOWN_MSG: Shutting down NameNode at localhost/127.0.1.1 <br>
+									************************************************************/ <br>
+								</code>
+								<!-- End 4 -->
+
+								<!-- 5 -->
+								<h5>
+									5. Start Hadoop Cluster
+								</h5>
+								<p>
+									Let’s start your Hadoop cluster using the scripts provides by Hadoop. Just navigate to
+									your $HADOOP_HOME/sbin directory and execute scripts one by one.
+								</p>
+								<code>Cd $HADOOP_HOME/sbin/ <br></code>
+								<p>
+									Now run start-dfs.sh script.
+								</p>
+
+								<code>./start-dfs.sh <br></code>
+
+								Sample output:
+								<code>
+									Starting namenodes on [localhost] <br>
+									Starting datanodes <br>
+									Starting secondary namenodes [localhost] <br>
+									2018-05-02 18:00:32,565 WARN util.NativeCodeLoader: Unable to load native-hadoop <br>
+									library for your platform... using builtin-java classes where applicable <br>
+								</code>
+
+								<p>
+									Now run start-yarn.sh script.
+								</p>
+
+								<code>./start-yarn.sh <br></code>
+
+								Sample output:
+								<code>
+									Starting resourcemanager <br>
+									Starting nodemanagers <br>
+								</code>
+								<!-- End 5 -->
+
+								<!-- 6 -->
+								<h5>
+									6. Access Hadoop Services in Browser
+								</h5>
+								<p>
+									Hadoop NameNode started on port 9870 default. Access your server on port 9870 in your
+									favorite web browser.
+								</p>
+								<code>http://localhost:9870/ <br></code>
+								<div class="row">
+									<div class="col-12">
+										<div class="post-details-thumb mb-15 text-center">
+											<img src="../../../img/hadoop/h1.png" alt="">
+										</div>
+									</div>
+								</div>
+								<p>
+									Now access port 8042 for getting the information about the cluster and all applications
+								</p>
+								<code>http:// localhost:8042/ <br></code>
+								<div class="row">
+									<div class="col-12">
+										<div class="post-details-thumb mb-15 text-center">
+											<img src="../../../img/hadoop/h2.png" alt="">
+										</div>
+									</div>
+								</div>
+								<p>
+									Access port 9864 to get details about your Hadoop node.
+								</p>
+
+								<code>http://localhost:9864/ <br></code>
+								<div class="row">
+									<div class="col-12">
+										<div class="post-details-thumb mb-15 text-center">
+											<img src="../../../img/hadoop/h3.png" alt="">
+										</div>
+									</div>
+								</div>
+								<!-- End 6 -->
+
+								<!-- 7 -->
+								<h5>
+									7. Test Hadoop Single Node Setup
+								</h5>
+								<p>
+									<b>7.1</b>Make the HDFS directories required using following commands.
+								</p>
+								<code>
+									bin/hdfs dfs -mkdir /user <br>
+									bin/hdfs dfs -mkdir /user/hadoop <br>
+								</code>
+
+								<p><b>7.2</b>Copy all files from local file system /var/log/httpd to hadoop distributed file
+									system using below command</p>
+
+								<code>bin/hdfs dfs -put /var/log/apache2 logs <br></code>
+
+								<p>
+									<b>7.3</b> Browse Hadoop distributed file system by opening below URL in the browser. You
+									will see an apache2 folder in the list. Click on the folder name to open and you will
+									find all log files there.
+								</p>
+
+								<code>http://localhost:9870/explorer.html#/user/hadoop/logs/</code>
+								<div class="row">
+									<div class="col-12">
+										<div class="post-details-thumb mb-15 text-center">
+											<img src="../../../img/hadoop/h4.png" alt="">
+										</div>
+									</div>
+								</div>
+
+								<p>
+									<b>7.4</b> – Now copy logs directory for hadoop distributed file system to local file system.
+								</p>
+
+								<code>
+									bin/hdfs dfs -get logs /tmp/logs <br>
+									ls -l /tmp/logs/
+								</code>
+
+								<!-- End 7 -->
+								<!-- END of Table Content -->
+								<!-- Post Tags Removed-->
+
+
+								<!-- Post Author -->
+								<div class="vizew-post-author d-flex align-items-center py-5">
+									<div class="post-author-thumb">
+										<img src="../../../img/team/sanchit.jpg" alt="">
+									</div>
+									<div class="post-author-desc pl-4">
+										<a href="#" class="author-name">Sanchitsagar Singh</a>
+										<p>References -<br>How to Setup Hadoop 3.1 on CentOS, Ubuntu and LinuxMint. Written by Rahul, Updated on May 3, 2018<br>URL: https://tecadmin.net/setup-hadoop-single-node-cluster-on-centos-redhat/ </p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ##### Post Details Area End ##### -->
+
+		<!-- ##### Footer Area Start ##### -->
+		<footer class="footer-area">
+			<div class="container">
+				<div class="row">
+					<!-- Footer Widget Area -->
+					<div class="col-12 col-sm-6 col-xl-4">
+						<div class="footer-widget mb-30">
+							<!-- Logo -->
+							<a href="../../../index.html" class="foo-logo d-block mb-4 text-center"><img src="../../../img/core-img/logo2.png" alt=""></a>
+							<p>Creating a technical atmosphere amongst the student. Enhancing student’s analytical and technical thinking. Making students industry ready by keeping them up-to-date with industry standard technologies.
+							</p>	
+						</div>
+					</div>
+
+					<!-- Footer Widget Area -->
+
+					<!-- Footer Widget Area -->
+					<div class="col-12 col-sm-6 col-xl-3 offset-xl-1">
+						<div class="footer-widget mb-30">
+							<h6 class="widget-title">Reach Us</h6>
+
+							<!-- Single Blog Post -->
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.6598743524723!2d72.82654491438136!3d19.38387464726096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7aec0a4b41bef%3A0xbd1a4ca919d6a613!2sVidyavardhini&#39;s+College+of+Engineering+and+Technology!5e0!3m2!1sen!2sin!4v1552972733009" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+							<!-- Single Blog Post -->
+
+						</div>
+					</div>
+
+					<!-- Footer Widget Area -->
+					<div class="col-12 col-sm-6 col-xl-3 offset-xl-1">
+						<div class="footer-widget mb-30">
+							<h6 class="widget-title">Our Aim</h6>
+							<!-- Contact Address -->
+							<div class="contact-address">
+								<p>C3 is a peer to peer learning group, which focuses on teaching and learning 
+									various skills and sharing expertise among the students for a 
+									cumulative growth of the community</p>
+
+							</div>
+							<!-- Footer Social Area -->
+							<div class="footer-social-area">
+								<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+								<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+								<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+								<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+								<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Copywrite Area -->
+			<div class="copywrite-area">
+				<div class="container">
+					<div class="row align-items-center">
+						<!-- Copywrite Text -->
+						<div class="col-12 col-sm-6">
+							<p class="copywrite-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="" target="_blank">Core Coding Committee</a>
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+						</div>
+						<div class="col-12 col-sm-6">
+							<nav class="footer-nav">
+								<ul>
+									<li><a href="../../../index.html">Home</a></li>
+									<li><a href="../../about.html">About</a></li>
+									<li><a href="../../django/blog/blog-grid.html">Subject</a></li>
+									<li><a href="../../team.html">Team</a></li>
+									<li><a href="../../contact.html">Contact</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- ##### Footer Area End ##### -->
+		<!-- ##### All Javascript Script ##### -->
+		<!-- jQuery-2.2.4 js -->
+		<script src="../../../js/jquery/jquery-2.2.4.min.js"></script>
+		<!-- Popper js -->
+		<script src="../../../js/bootstrap/popper.min.js"></script>
+		<!-- Bootstrap js -->
+		<script src="../../../js/bootstrap/bootstrap.min.js"></script>
+		<!-- All Plugins js -->
+		<script src="../../../js/plugins/plugins.js"></script>
+		<!-- Active js -->
+		<script src="../../../js/active.js"></script>
+	</body>
+
+</html>

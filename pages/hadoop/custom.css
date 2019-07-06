@@ -1,0 +1,13 @@
+code {
+    background-color: #212121;
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    color: #db4437;
+}
+
+.hadoop-image{
+    background-size: cover;
+    widows: 200px;
+    height: 200px;
+}
